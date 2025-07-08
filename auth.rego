@@ -22,8 +22,6 @@ allow { # No 'if' here, directly defines the rule
     # 5. Validate the scope of the role assignment against the resource
     is_scope_valid(role_assignment, role_def, input.resource)
 }
-# Set the default value for 'allow' if no other 'allow' rule evaluates to true.
-default allow = false # This default applies if the 'allow { ... }' rule above does NOT find a successful path.
 
 # --- Helper rule for permission checking (direct match or wildcard match) ---
 permission_is_granted(defined_permissions, requested_action) if { # Added 'if'
