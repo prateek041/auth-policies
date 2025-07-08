@@ -2,12 +2,10 @@ package iam.authz
 
 import future.keywords.in
 
-# By default, deny access
-default allow = false
-
 # Allow if any of the user's assigned roles grant the required permission
 # for the action on the resource, considering the scope.
-allow if {
+# By default, deny access
+allow { # No 'if' here, directly defines the rule
     # 1. Ensure user and resource belong to the same organization (Data Seclusion)
     input.user.organization_id == input.resource.owning_organization_id
 
@@ -24,6 +22,8 @@ allow if {
     # 5. Validate the scope of the role assignment against the resource
     is_scope_valid(role_assignment, role_def, input.resource)
 }
+# Set the default value for 'allow' if no other 'allow' rule evaluates to true.
+default allow = false # This default applies if the 'allow { ... }' rule above does NOT find a successful path.
 
 # --- Helper rule for permission checking (direct match or wildcard match) ---
 permission_is_granted(defined_permissions, requested_action) if { # Added 'if'
@@ -55,3 +55,6 @@ is_scope_valid(role_assignment, role_def, resource) if { # Added 'if'
     resource.owning_team_id # This implicitly checks if owning_team_id is not null/undefined
     role_assignment.scope_id == resource.owning_team_id
 }
+
+# By default, deny access
+default allow = false
