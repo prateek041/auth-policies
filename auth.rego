@@ -1,5 +1,7 @@
 package iam.authz
 
+import future.keywords.in
+
 # By default, deny access
 default allow = false
 
