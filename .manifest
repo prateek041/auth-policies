@@ -1,8 +1,0 @@
-# A list of file patterns for policy (.rego) files
-policy:
-  - "auth.rego"
-
-# A list of file patterns for data (.json) files
-# We now add our data.json file here.
-data:
-  - "data.json"
