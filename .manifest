@@ -3,5 +3,6 @@ policy:
   - "auth.rego"
 
 # A list of file patterns for data (.json) files
-# We don't have a data.json right now, but we'll leave this here for the future.
-data: []
+# We now add our data.json file here.
+data:
+  - "data.json"
