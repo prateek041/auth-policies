@@ -1,11 +1,98 @@
 {
-  "roles": {
-    "editor": [
-      "documents:read",
-      "documents:write"
-    ],
-    "viewer": [
-      "documents:read"
-    ]
-  }
+  "role_definitions": [
+    {
+      "role_id": "role_system_owner",
+      "name": "Owner",
+      "description": "Full access to all organization resources, including billing and member management.",
+      "type": "qbit_defined",
+      "is_editable": false,
+      "scope_applicability": [
+        "organization"
+      ],
+      "permissions": [
+        "organization:*",
+        "billing:*",
+        "monitoring:*",
+        "member:*",
+        "role:*",
+        "team:*",
+        "kb:*",
+        "app:*",
+        "llm:*"
+      ]
+    },
+    {
+      "role_id": "role_system_admin",
+      "name": "Admin",
+      "description": "Can manage members, teams, and resources across the organization.",
+      "type": "qbit_defined",
+      "is_editable": false,
+      "scope_applicability": [
+        "organization"
+      ],
+      "permissions": [
+        "organization:*",
+        "billing:*",
+        "monitoring:*",
+        "member:*",
+        "role:*",
+        "team:*",
+        "kb:*",
+        "app:*",
+        "llm:*"
+      ]
+    },
+    {
+      "role_id": "role_system_team_manager",
+      "name": "Team Manager",
+      "description": "Can manage members and resources within their assigned team.",
+      "type": "qbit_defined",
+      "is_editable": false,
+      "scope_applicability": [
+        "team"
+      ],
+      "permissions": [
+        "team:read",
+        "team:update",
+        "team:add_member",
+        "team:remove_member",
+        "kb:create",
+        "kb:read",
+        "kb:update",
+        "kb:delete",
+        "kb:chat",
+        "kb:share",
+        "app:create",
+        "app:read",
+        "app:update",
+        "app:delete",
+        "app:run",
+        "app:share"
+      ]
+    },
+    {
+      "role_id": "role_system_member",
+      "name": "Member",
+      "description": "Can create and use Knowledge Bases and Apps within their assigned team.",
+      "type": "qbit_defined",
+      "is_editable": false,
+      "scope_applicability": [
+        "organization",
+        "team"
+      ],
+      "permissions": [
+        "team:read",
+        "kb:create",
+        "kb:read",
+        "kb:update",
+        "kb:delete",
+        "kb:chat",
+        "app:create",
+        "app:read",
+        "app:update",
+        "app:delete",
+        "app:run"
+      ]
+    }
+  ]
 }
