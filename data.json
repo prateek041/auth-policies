@@ -3,14 +3,12 @@
     {
       "role_id": "role_system_owner",
       "name": "Owner",
-      "description": "Full access to all organization resources, including billing and member management.",
+      "description": "Full access to all organisation resources, including billing and member management.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": [
-        "organization"
-      ],
+      "scope_applicability": ["organisation"],
       "permissions": [
-        "organization:*",
+        "organisation:*",
         "billing:*",
         "monitoring:*",
         "member:*",
@@ -24,14 +22,12 @@
     {
       "role_id": "role_system_admin",
       "name": "Admin",
-      "description": "Can manage members, teams, and resources across the organization.",
+      "description": "Can manage members, teams, and resources across the organisation.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": [
-        "organization"
-      ],
+      "scope_applicability": ["organisation"],
       "permissions": [
-        "organization:*",
+        "organisation:*",
         "billing:*",
         "monitoring:*",
         "member:*",
@@ -48,9 +44,7 @@
       "description": "Can manage members and resources within their assigned team.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": [
-        "team"
-      ],
+      "scope_applicability": ["team"],
       "permissions": [
         "team:read",
         "team:update",
@@ -76,10 +70,7 @@
       "description": "Can create and use Knowledge Bases and Apps within their assigned team.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": [
-        "organization",
-        "team"
-      ],
+      "scope_applicability": ["organisation", "team"],
       "permissions": [
         "team:read",
         "kb:create",
