@@ -6,12 +6,16 @@
       "description": "Full access to all organisation resources, including billing and member management.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": ["organisation"],
+      "scope_applicability": [
+        "organisation"
+      ],
       "permissions": [
         "organisation:*",
         "billing:*",
         "monitoring:*",
         "member:*",
+        "admin:*",
+        "owner:*",
         "role:*",
         "team:*",
         "kb:*",
@@ -25,7 +29,9 @@
       "description": "Can manage members, teams, and resources across the organisation.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": ["organisation"],
+      "scope_applicability": [
+        "organisation"
+      ],
       "permissions": [
         "organisation:*",
         "billing:*",
@@ -44,7 +50,9 @@
       "description": "Can manage members and resources within their assigned team.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": ["team"],
+      "scope_applicability": [
+        "team"
+      ],
       "permissions": [
         "team:read",
         "team:update",
@@ -70,7 +78,10 @@
       "description": "Can create and use Knowledge Bases and Apps within their assigned team.",
       "type": "qbit_defined",
       "is_editable": false,
-      "scope_applicability": ["organisation", "team"],
+      "scope_applicability": [
+        "organisation",
+        "team"
+      ],
       "permissions": [
         "team:read",
         "kb:create",
