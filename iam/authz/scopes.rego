@@ -15,3 +15,7 @@ scope_is_valid(assigned_role, resource) if {
 	# preventing a team-scoped role from accessing an org-level resource.
 	assigned_role.scope_id == resource.owning_team_id
 }
+
+is_resource_owner(user, resource) if {
+  user.id == resource.owner_id
+}
