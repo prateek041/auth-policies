@@ -20,7 +20,8 @@
         "team:*",
         "kb:*",
         "app:*",
-        "llm:*"
+        "llm:*",
+        "agent:*"
       ]
     },
     {
@@ -41,7 +42,8 @@
         "team:*",
         "kb:*",
         "app:*",
-        "llm:*"
+        "llm:*",
+        "agent:*"
       ]
     },
     {
@@ -69,7 +71,8 @@
         "app:update",
         "app:delete",
         "app:run",
-        "app:share"
+        "app:share",
+        "agent:*"
       ]
     },
     {
@@ -93,7 +96,8 @@
         "app:read",
         "app:update",
         "app:delete",
-        "app:run"
+        "app:run",
+        "agent:*"
       ]
     }
   ]
