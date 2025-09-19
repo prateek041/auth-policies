@@ -56,6 +56,8 @@
         "team"
       ],
       "permissions": [
+        "organisation:read_settings",
+        "organisation:read_members",
         "team:read",
         "team:update",
         "team:add_member",
@@ -86,6 +88,8 @@
         "team"
       ],
       "permissions": [
+        "organisation:read_settings",
+        "organisation:read_members",
         "team:read",
         "kb:create",
         "kb:read",
