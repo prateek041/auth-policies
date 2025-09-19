@@ -21,7 +21,8 @@
         "kb:*",
         "app:*",
         "llm:*",
-        "agent:*"
+        "agent:create",
+        "agent:use"
       ]
     },
     {
@@ -74,7 +75,8 @@
         "app:delete",
         "app:run",
         "app:share",
-        "agent:*"
+        "agent:create",
+        "agent:use"
       ]
     },
     {
@@ -101,7 +103,8 @@
         "app:update",
         "app:delete",
         "app:run",
-        "agent:*"
+        "agent:create",
+        "agent:use"
       ]
     }
   ]
