@@ -22,6 +22,10 @@ allow if {
 
 	# 5. Delegate to check if the role's scope is valid for this resource.
 	scope_is_valid(assigned_role, input.resource)
+
+# 6. Check if the action is performed on resources by it's owner. Useful
+# in scenarios when dealing with Agents, Knowledge bases, workflows etc.
+  is_resource_owner(input.user, input.resource)
 }
 
 # Helper rule to find a role definition by its ID
